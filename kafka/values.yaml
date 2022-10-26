@@ -1,0 +1,8 @@
+kafka:
+  externalAccess:
+    enabled: true
+    autoDiscovery:
+      enabled: true
+
+  rbac:
+    create: true
