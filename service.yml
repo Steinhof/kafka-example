@@ -1,0 +1,53 @@
+# service zookeeper/kafka
+apiVersion: v1
+kind: Service
+metadata:
+  name: zookeeper
+  labels:
+    app: zookeeper
+spec:
+  ports:
+    - name: tcp-client
+      protocol: TCP
+      port: 2181
+      targetPort: client
+    - name: tcp-follower
+      protocol: TCP
+      port: 2888
+      targetPort: follower
+    - name: tcp-election
+      protocol: TCP
+      port: 3888
+      targetPort: election
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: kafka
+  labels:
+    name: kafka
+spec:
+  ports:
+    - name: kafka-external
+      protocol: TCP
+      port: 9094
+      targetPort: 9094
+  selector:
+    app: kafka
+  type: LoadBalancer
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: kafka-external
+  labels:
+    name: kafka-external
+spec:
+  ports:
+    - name: tcp-kafka
+      protocol: TCP
+      port: 9094
+      targetPort: kafka-external
+  selector:
+    app: kafka
+  type: LoadBalancer
