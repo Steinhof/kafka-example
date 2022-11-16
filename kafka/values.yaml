@@ -1,4 +1,9 @@
 kafka:
+  persistence:
+    enabled: false
+  zookeeper:
+    persistence:
+      enabled: false
   externalAccess:
     enabled: true
     autoDiscovery:
