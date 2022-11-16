@@ -1,0 +1,490 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: kafka-zookeeper-0
+  generateName: kafka-zookeeper-
+  namespace: default
+  uid: d67e3f9f-e953-457e-ad4a-207dbeb5476b
+  resourceVersion: '3272'
+  creationTimestamp: '2022-11-15T16:21:09Z'
+  labels:
+    app.kubernetes.io/component: zookeeper
+    app.kubernetes.io/instance: kafka
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: zookeeper
+    controller-revision-hash: kafka-zookeeper-554db4486d
+    helm.sh/chart: zookeeper-10.2.2
+    statefulset.kubernetes.io/pod-name: kafka-zookeeper-0
+  ownerReferences:
+    - apiVersion: apps/v1
+      kind: StatefulSet
+      name: kafka-zookeeper
+      uid: 18565c0a-b4be-4b79-90e0-b237d9a47a5a
+      controller: true
+      blockOwnerDeletion: true
+  managedFields:
+    - manager: kube-controller-manager
+      operation: Update
+      apiVersion: v1
+      time: '2022-11-15T16:21:09Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/instance: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:app.kubernetes.io/name: {}
+            f:controller-revision-hash: {}
+            f:helm.sh/chart: {}
+            f:statefulset.kubernetes.io/pod-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"18565c0a-b4be-4b79-90e0-b237d9a47a5a"}: {}
+        f:spec:
+          f:affinity:
+            .: {}
+            f:podAntiAffinity:
+              .: {}
+              f:preferredDuringSchedulingIgnoredDuringExecution: {}
+          f:containers:
+            k:{"name":"zookeeper"}:
+              .: {}
+              f:command: {}
+              f:env:
+                .: {}
+                k:{"name":"ALLOW_ANONYMOUS_LOGIN"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"BITNAMI_DEBUG"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"POD_NAME"}:
+                  .: {}
+                  f:name: {}
+                  f:valueFrom:
+                    .: {}
+                    f:fieldRef: {}
+                k:{"name":"ZOO_4LW_COMMANDS_WHITELIST"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"ZOO_AUTOPURGE_INTERVAL"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"ZOO_AUTOPURGE_RETAIN_COUNT"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"ZOO_DATA_LOG_DIR"}:
+                  .: {}
+                  f:name: {}
+                k:{"name":"ZOO_ENABLE_AUTH"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"ZOO_ENABLE_QUORUM_AUTH"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"ZOO_HEAP_SIZE"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"ZOO_INIT_LIMIT"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"ZOO_LISTEN_ALLIPS_ENABLED"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"ZOO_LOG_LEVEL"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"ZOO_MAX_CLIENT_CNXNS"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"ZOO_MAX_SESSION_TIMEOUT"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"ZOO_PORT_NUMBER"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"ZOO_PRE_ALLOC_SIZE"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"ZOO_SERVERS"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"ZOO_SNAPCOUNT"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"ZOO_SYNC_LIMIT"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"ZOO_TICK_TIME"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:livenessProbe:
+                .: {}
+                f:exec:
+                  .: {}
+                  f:command: {}
+                f:failureThreshold: {}
+                f:initialDelaySeconds: {}
+                f:periodSeconds: {}
+                f:successThreshold: {}
+                f:timeoutSeconds: {}
+              f:name: {}
+              f:ports:
+                .: {}
+                k:{"containerPort":2181,"protocol":"TCP"}:
+                  .: {}
+                  f:containerPort: {}
+                  f:name: {}
+                  f:protocol: {}
+                k:{"containerPort":2888,"protocol":"TCP"}:
+                  .: {}
+                  f:containerPort: {}
+                  f:name: {}
+                  f:protocol: {}
+                k:{"containerPort":3888,"protocol":"TCP"}:
+                  .: {}
+                  f:containerPort: {}
+                  f:name: {}
+                  f:protocol: {}
+              f:readinessProbe:
+                .: {}
+                f:exec:
+                  .: {}
+                  f:command: {}
+                f:failureThreshold: {}
+                f:initialDelaySeconds: {}
+                f:periodSeconds: {}
+                f:successThreshold: {}
+                f:timeoutSeconds: {}
+              f:resources:
+                .: {}
+                f:requests:
+                  .: {}
+                  f:cpu: {}
+                  f:memory: {}
+              f:securityContext:
+                .: {}
+                f:allowPrivilegeEscalation: {}
+                f:runAsNonRoot: {}
+                f:runAsUser: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+              f:volumeMounts:
+                .: {}
+                k:{"mountPath":"/bitnami/zookeeper"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/scripts/setup.sh"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                  f:subPath: {}
+          f:dnsPolicy: {}
+          f:enableServiceLinks: {}
+          f:hostname: {}
+          f:restartPolicy: {}
+          f:schedulerName: {}
+          f:securityContext:
+            .: {}
+            f:fsGroup: {}
+          f:serviceAccount: {}
+          f:serviceAccountName: {}
+          f:subdomain: {}
+          f:terminationGracePeriodSeconds: {}
+          f:volumes:
+            .: {}
+            k:{"name":"data"}:
+              .: {}
+              f:name: {}
+              f:persistentVolumeClaim:
+                .: {}
+                f:claimName: {}
+            k:{"name":"scripts"}:
+              .: {}
+              f:configMap:
+                .: {}
+                f:defaultMode: {}
+                f:name: {}
+              f:name: {}
+    - manager: kube-scheduler
+      operation: Update
+      apiVersion: v1
+      time: '2022-11-15T16:21:09Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            .: {}
+            k:{"type":"PodScheduled"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:message: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+      subresource: status
+    - manager: kubelet
+      operation: Update
+      apiVersion: v1
+      time: '2022-11-15T16:21:10Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            k:{"type":"ContainersReady"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:message: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Initialized"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Ready"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:message: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+          f:containerStatuses: {}
+          f:hostIP: {}
+          f:startTime: {}
+      subresource: status
+  selfLink: /api/v1/namespaces/default/pods/kafka-zookeeper-0
+status:
+  phase: Pending
+  conditions:
+    - type: Initialized
+      status: 'True'
+      lastProbeTime: null
+      lastTransitionTime: '2022-11-15T16:21:10Z'
+    - type: Ready
+      status: 'False'
+      lastProbeTime: null
+      lastTransitionTime: '2022-11-15T16:21:10Z'
+      reason: ContainersNotReady
+      message: 'containers with unready status: [zookeeper]'
+    - type: ContainersReady
+      status: 'False'
+      lastProbeTime: null
+      lastTransitionTime: '2022-11-15T16:21:10Z'
+      reason: ContainersNotReady
+      message: 'containers with unready status: [zookeeper]'
+    - type: PodScheduled
+      status: 'True'
+      lastProbeTime: null
+      lastTransitionTime: '2022-11-15T16:21:10Z'
+  hostIP: 192.168.49.2
+  startTime: '2022-11-15T16:21:10Z'
+  containerStatuses:
+    - name: zookeeper
+      state:
+        waiting:
+          reason: ContainerCreating
+      lastState: {}
+      ready: false
+      restartCount: 0
+      image: docker.io/bitnami/zookeeper:3.8.0-debian-11-r36
+      imageID: ''
+      started: false
+  qosClass: Burstable
+spec:
+  volumes:
+    - name: data
+      persistentVolumeClaim:
+        claimName: data-kafka-zookeeper-0
+    - name: scripts
+      configMap:
+        name: kafka-zookeeper-scripts
+        defaultMode: 493
+    - name: kube-api-access-sp8zt
+      projected:
+        sources:
+          - serviceAccountToken:
+              expirationSeconds: 3607
+              path: token
+          - configMap:
+              name: kube-root-ca.crt
+              items:
+                - key: ca.crt
+                  path: ca.crt
+          - downwardAPI:
+              items:
+                - path: namespace
+                  fieldRef:
+                    apiVersion: v1
+                    fieldPath: metadata.namespace
+        defaultMode: 420
+  containers:
+    - name: zookeeper
+      image: docker.io/bitnami/zookeeper:3.8.0-debian-11-r36
+      command:
+        - /scripts/setup.sh
+      ports:
+        - name: client
+          containerPort: 2181
+          protocol: TCP
+        - name: follower
+          containerPort: 2888
+          protocol: TCP
+        - name: election
+          containerPort: 3888
+          protocol: TCP
+      env:
+        - name: BITNAMI_DEBUG
+          value: 'false'
+        - name: ZOO_DATA_LOG_DIR
+        - name: ZOO_PORT_NUMBER
+          value: '2181'
+        - name: ZOO_TICK_TIME
+          value: '2000'
+        - name: ZOO_INIT_LIMIT
+          value: '10'
+        - name: ZOO_SYNC_LIMIT
+          value: '5'
+        - name: ZOO_PRE_ALLOC_SIZE
+          value: '65536'
+        - name: ZOO_SNAPCOUNT
+          value: '100000'
+        - name: ZOO_MAX_CLIENT_CNXNS
+          value: '60'
+        - name: ZOO_4LW_COMMANDS_WHITELIST
+          value: srvr, mntr, ruok
+        - name: ZOO_LISTEN_ALLIPS_ENABLED
+          value: 'no'
+        - name: ZOO_AUTOPURGE_INTERVAL
+          value: '0'
+        - name: ZOO_AUTOPURGE_RETAIN_COUNT
+          value: '3'
+        - name: ZOO_MAX_SESSION_TIMEOUT
+          value: '40000'
+        - name: ZOO_SERVERS
+          value: >-
+            kafka-zookeeper-0.kafka-zookeeper-headless.default.svc.cluster.local:2888:3888::1
+        - name: ZOO_ENABLE_AUTH
+          value: 'no'
+        - name: ZOO_ENABLE_QUORUM_AUTH
+          value: 'no'
+        - name: ZOO_HEAP_SIZE
+          value: '1024'
+        - name: ZOO_LOG_LEVEL
+          value: ERROR
+        - name: ALLOW_ANONYMOUS_LOGIN
+          value: 'yes'
+        - name: POD_NAME
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.name
+      resources:
+        requests:
+          cpu: 250m
+          memory: 256Mi
+      volumeMounts:
+        - name: scripts
+          mountPath: /scripts/setup.sh
+          subPath: setup.sh
+        - name: data
+          mountPath: /bitnami/zookeeper
+        - name: kube-api-access-sp8zt
+          readOnly: true
+          mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      livenessProbe:
+        exec:
+          command:
+            - /bin/bash
+            - '-c'
+            - echo "ruok" | timeout 2 nc -w 2 localhost 2181 | grep imok
+        initialDelaySeconds: 30
+        timeoutSeconds: 5
+        periodSeconds: 10
+        successThreshold: 1
+        failureThreshold: 6
+      readinessProbe:
+        exec:
+          command:
+            - /bin/bash
+            - '-c'
+            - echo "ruok" | timeout 2 nc -w 2 localhost 2181 | grep imok
+        initialDelaySeconds: 5
+        timeoutSeconds: 5
+        periodSeconds: 10
+        successThreshold: 1
+        failureThreshold: 6
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      imagePullPolicy: IfNotPresent
+      securityContext:
+        runAsUser: 1001
+        runAsNonRoot: true
+        allowPrivilegeEscalation: false
+  restartPolicy: Always
+  terminationGracePeriodSeconds: 30
+  dnsPolicy: ClusterFirst
+  serviceAccountName: default
+  serviceAccount: default
+  nodeName: minikube
+  securityContext:
+    fsGroup: 1001
+  hostname: kafka-zookeeper-0
+  subdomain: kafka-zookeeper-headless
+  affinity:
+    podAntiAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+        - weight: 1
+          podAffinityTerm:
+            labelSelector:
+              matchLabels:
+                app.kubernetes.io/component: zookeeper
+                app.kubernetes.io/instance: kafka
+                app.kubernetes.io/name: zookeeper
+            namespaces:
+              - default
+            topologyKey: kubernetes.io/hostname
+  schedulerName: default-scheduler
+  tolerations:
+    - key: node.kubernetes.io/not-ready
+      operator: Exists
+      effect: NoExecute
+      tolerationSeconds: 300
+    - key: node.kubernetes.io/unreachable
+      operator: Exists
+      effect: NoExecute
+      tolerationSeconds: 300
+  priority: 0
+  enableServiceLinks: true
+  preemptionPolicy: PreemptLowerPriority
+

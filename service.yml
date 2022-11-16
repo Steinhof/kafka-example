@@ -25,29 +25,13 @@ kind: Service
 metadata:
   name: kafka
   labels:
-    name: kafka
+    app: kafka
 spec:
   ports:
     - name: kafka-external
       protocol: TCP
       port: 9094
       targetPort: 9094
-  selector:
-    app: kafka
-  type: LoadBalancer
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: kafka-external
-  labels:
-    name: kafka-external
-spec:
-  ports:
-    - name: tcp-kafka
-      protocol: TCP
-      port: 9094
-      targetPort: kafka-external
   selector:
     app: kafka
   type: LoadBalancer

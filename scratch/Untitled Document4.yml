@@ -1,0 +1,66 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: kafka-service
+  namespace: default
+  uid: c9736350-9e08-41ae-a99e-dcf090387b73
+  resourceVersion: '2994'
+  creationTimestamp: '2022-11-15T16:19:42Z'
+  labels:
+    name: kafka-service
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: >
+      {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"labels":{"name":"kafka-service"},"name":"kafka-service","namespace":"default"},"spec":{"ports":[{"name":"kafka-external","port":9094,"protocol":"TCP"}],"selector":{"app":"kafka"},"type":"LoadBalancer"}}
+  managedFields:
+    - manager: kubectl-client-side-apply
+      operation: Update
+      apiVersion: v1
+      time: '2022-11-15T16:19:42Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+          f:labels:
+            .: {}
+            f:name: {}
+        f:spec:
+          f:allocateLoadBalancerNodePorts: {}
+          f:externalTrafficPolicy: {}
+          f:internalTrafficPolicy: {}
+          f:ports:
+            .: {}
+            k:{"port":9094,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector: {}
+          f:sessionAffinity: {}
+          f:type: {}
+  selfLink: /api/v1/namespaces/default/services/kafka-service
+status:
+  loadBalancer: {}
+spec:
+  ports:
+    - name: kafka-external
+      protocol: TCP
+      port: 9094
+      targetPort: 9094
+      nodePort: 31448
+  selector:
+    app: kafka
+  clusterIP: 10.96.250.84
+  clusterIPs:
+    - 10.96.250.84
+  type: LoadBalancer
+  sessionAffinity: None
+  externalTrafficPolicy: Cluster
+  ipFamilies:
+    - IPv4
+  ipFamilyPolicy: SingleStack
+  allocateLoadBalancerNodePorts: true
+  internalTrafficPolicy: Cluster
+
